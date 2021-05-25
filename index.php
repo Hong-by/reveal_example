@@ -363,6 +363,49 @@
     </section>
     <!-- End of Contects Section Area -->
 
+    <!-- recieved Section Area -->
+    <section id="received" class="section">
+      <div class="center">
+       <div class="section-title">
+          <h2>Message Received</h2>
+          <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p>
+        </div>
+
+        <ul class="msg-table">
+          <li class="msg-tit">
+            <span>글쓴이</span>
+            <span>이메일</span>
+            <span>제목</span>
+            <span>등록일</span>
+          </li>
+          <?php
+            include_once $_SERVER['DOCUMENT_ROOT']."/mySite/reveal/php/connect.php"; //$db_conn 변수 사용을 위한 코드
+            $sql = "SELECT * FROM re_message ORDER BY RE_idx DESC";
+
+            $msg_result = mysqli_query($db_conn, $sql);
+            // var_dump($msg_result);
+
+            while($row = mysqli_fetch_array($msg_result)){
+              $name = $row['RE_name'];
+              $email = $row['RE_email'];
+              $subject = $row['RE_subject'];
+              $regist = $row['RE_reg'];
+              //echo $name;
+          ?>
+          <li class="msg-con">
+            <span><?=$name?></span>
+            <span><?=$email?></span>
+            <span><?=$subject?></span>
+            <span><?=$regist?></span>
+          </li>
+          <?php
+            };
+          ?>
+        </ul>
+      </div>
+    </section>
+    <!-- End of recieved Section Area -->
+
     <footer>
       <p>Project Mong Design All Right Reserved.</p>
     </footer>

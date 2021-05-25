@@ -144,5 +144,24 @@ textarea{resize: none;}
 #contact .form-area .send-btn{width: 100%; height: auto; display: flex; justify-content: center;}
 #contact .form-area .send-btn button{border: 0; color: #fff; font-weight: 600; padding: 10px 30px; background: #50d8af; cursor: pointer;}
 
+
+/* Received Section Style Code */
+#received .msg-table{width: 100%; height: auto; margin-bottom: 20px;}
+#received .msg-table li{display: flex; text-align: center; padding: 10px 0; border: 1px solid #f3f3f3; font-size: 14px; color: #333;}
+#received .msg-table .msg-tit{background: #50d8af;}
+#received .msg-table .msg-tit span{color: #fff; font-weight: 600;}
+
+#received .msg-table span:nth-child(1){width: 15%;}
+#received .msg-table span:nth-child(2){width: 20%;}
+#received .msg-table span:nth-child(3){width: 45%;}
+#received .msg-table span:nth-child(4){width: 20%;}
+
+#received .msg-table .msg-con span:nth-child(3){text-align: left;}
+
+
+
+
 footer{width: 100%; height: auto; display: flex; background: #50d8af; justify-content: center;}
 footer p{padding: 25px 0; color: #fff; font-weight: 600; margin-bottom: 0;}
+
+

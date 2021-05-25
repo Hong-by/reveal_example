@@ -28,6 +28,7 @@ sendBtn.onclick = (e) => {
     return;
   }
   document.form_data.submit();
+  //form_data의 데이터를 action 주소로 넘겨준다
 
 
 }
